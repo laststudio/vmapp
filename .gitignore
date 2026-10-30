@@ -1,0 +1,78 @@
+# ---------- Gradle ----------
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ---------- Kotlin / JVM ----------
+*.class
+*.log
+hs_err_pid*
+replay_pid*
+out/
+bin/
+target/
+
+# ---------- IntelliJ IDEA / Android Studio ----------
+.idea/
+*.iml
+*.ipr
+*.iws
+*.hprof
+
+# 如果你想保留团队共享的 IDEA 配置，可改成：
+# .idea/*
+# !.idea/codeStyles/
+# !.idea/inspectionProfiles/
+# !.idea/vcs.xml
+
+# ---------- 构建产物 / 打包 ----------
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+# ---------- 日志与临时文件 ----------
+logs/
+*.log.*
+*.tmp
+*.swp
+*~
+
+# ---------- 系统文件 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- 环境 / 本地配置 ----------
+.env
+.env.*
+!.env.example
+local.properties
+*.local
+secrets.properties
+
+# ---------- 测试与覆盖率 ----------
+/test-output/
+coverage/
+*.exec
+
+# ---------- 其他 ----------
+*.orig
+*.rej
+
+# Android
+*.apk
+*.aab
+*.ap_
+*.dex
+captures/
+.externalNativeBuild/
+.cxx/
+*.keystore
+*.jks
+!debug.keystore

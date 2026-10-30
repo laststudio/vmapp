@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!-- Lightweight Container Coordinator & Control Broker Process (:daemon) -->
+        <service
+            android:name="com.zerobox.runtime.daemon.ZeroDaemonService"
+            android:exported="false"
+            android:process=":daemon" />
+
+        <!-- Isolated Container Process Slots (:p0 ~ :p3) -->
+        <activity
+            android:name="com.zerobox.runtime.delegate.SlotActivity$P0"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode"
+            android:exported="false"
+            android:process=":p0"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar" />
+
+        <activity
+            android:name="com.zerobox.runtime.delegate.SlotActivity$P1"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode"
+            android:exported="false"
+            android:process=":p1"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar" />
+
+        <activity
+            android:name="com.zerobox.runtime.delegate.SlotActivity$P2"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode"
+            android:exported="false"
+            android:process=":p2"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar" />
+
+        <activity
+            android:name="com.zerobox.runtime.delegate.SlotActivity$P3"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode"
+            android:exported="false"
+            android:process=":p3"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar" />
+
+        <service
+            android:name="com.zerobox.runtime.delegate.SlotService$P0"
+            android:exported="false"
+            android:process=":p0" />
+
+        <service
+            android:name="com.zerobox.runtime.delegate.SlotService$P1"
+            android:exported="false"
+            android:process=":p1" />
+
+        <provider
+            android:name="com.zerobox.runtime.delegate.SlotProvider$P0"
+            android:authorities="${applicationId}.zerobox.slot.p0"
+            android:exported="false"
+            android:process=":p0" />
+
+        <provider
+            android:name="com.zerobox.runtime.delegate.SlotProvider$P1"
+            android:authorities="${applicationId}.zerobox.slot.p1"
+            android:exported="false"
+            android:process=":p1" />
+    </application>
+</manifest>

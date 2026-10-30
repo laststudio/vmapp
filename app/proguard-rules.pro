@@ -1,0 +1,2 @@
+-keep class com.zerobox.** { *; }
+-keep class de.robv.android.xposed.** { *; }
